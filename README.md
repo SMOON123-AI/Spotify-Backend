@@ -72,7 +72,7 @@ SPOTIFY-PROJECT/
 └── .gitignore
 ```
 
-⚙️ Installation
+##⚙️ Installation
 1. Clone the repository
 git clone YOUR_GITHUB_REPOSITORY_URL
 
@@ -99,7 +99,7 @@ npm run dev
 Or:
 
 node server.js
-🔐 Environment Variables
+##🔐 Environment Variables
 
 The application requires the following environment variables:
 
@@ -110,7 +110,7 @@ IMAGEKIT_PRIVATE_KEY	ImageKit private key used for media uploads
 
 Important: Never commit your .env file to GitHub.
 
-🔑 Authentication
+##🔑 Authentication
 
 The application uses JWT-based authentication.
 
@@ -144,7 +144,7 @@ Store JWT in cookie
 
 Protected routes verify the JWT before allowing access.
 
-👤 User Roles
+##👤 User Roles
 
 The application supports two roles:
 
@@ -159,7 +159,7 @@ Manage their uploaded music
 
 Protected routes verify both authentication and authorization.
 
-🎵 Music Management
+##🎵 Music Management
 
 Artists can upload music along with a thumbnail.
 
@@ -183,7 +183,7 @@ MongoDB
 
 The music file and thumbnail are uploaded to ImageKit, while their URLs and metadata are stored in MongoDB.
 
-💿 Album Management
+##💿 Album Management
 
 Artists can create albums by selecting specific music from their uploaded songs.
 
@@ -220,7 +220,8 @@ Check music exists
 Check music belongs to artist
    ↓
 Create album
-🗄️ Database Models
+
+##🗄️ Database Models
 
 The project uses MongoDB with Mongoose.
 
@@ -259,7 +260,7 @@ Music references
 
 Albums contain references to music documents using Mongoose ObjectId.
 
-🔗 Database Relationships
+##🔗 Database Relationships
 
 The project uses Mongoose references to connect documents.
 
@@ -277,105 +278,7 @@ An artist can have multiple music documents.
 
 An album can contain multiple music documents.
 
-📡 API Endpoints
-
-The exact route prefix depends on how the routes are mounted in app.js.
-
-Authentication
-Register
-POST /auth/register
-
-Registers a new user.
-
-Request Body
-{
-  "username": "john",
-  "email": "john@example.com",
-  "password": "password123"
-}
-Login
-POST /auth/login
-
-Authenticates an existing user.
-
-Request Body
-{
-  "email": "john@example.com",
-  "password": "password123"
-}
-
-A JWT is generated after successful authentication.
-
-Logout
-GET /auth/logout
-
-Logs out the authenticated user by clearing the authentication cookie.
-
-🎵 Music API
-Upload Music
-POST /music
-Authentication
-
-Required.
-
-Authorization
-
-Artist only.
-
-Content Type
-multipart/form-data
-Form Fields
-title
-music
-thumbnail
-
-The music file and thumbnail are uploaded using Multer and stored through ImageKit.
-
-Get Music
-GET /music
-
-Returns available music.
-
-Get Music by ID
-GET /music/:id
-
-Returns information about a specific music document.
-
-💿 Album API
-Create Album
-POST /album
-Authentication
-
-Required.
-
-Authorization
-
-Artist only.
-
-Request Body
-{
-  "title": "My First Album",
-  "musics": [
-    "MUSIC_ID_1",
-    "MUSIC_ID_2",
-    "MUSIC_ID_3"
-  ]
-}
-Example Response
-{
-  "message": "Album created successfully",
-  "album": {
-    "id": "ALBUM_ID",
-    "title": "My First Album",
-    "musics": [
-      "MUSIC_ID_1",
-      "MUSIC_ID_2",
-      "MUSIC_ID_3"
-    ],
-    "artist": "ARTIST_ID"
-  }
-}
-🛡️ Security
+##🛡️ Security
 
 The project implements several security practices:
 
@@ -398,7 +301,7 @@ IMAGEKIT_PRIVATE_KEY
 
 are not included in the repository.
 
-📦 Dependencies
+##📦 Dependencies
 
 Main dependencies include:
 
