@@ -72,7 +72,7 @@ SPOTIFY-PROJECT/
 └── .gitignore
 ```
 
-##⚙️ Installation
+#⚙️ Installation
 1. Clone the repository
 git clone YOUR_GITHUB_REPOSITORY_URL
 
@@ -99,7 +99,7 @@ npm run dev
 Or:
 
 node server.js
-##🔐 Environment Variables
+#🔐 Environment Variables
 
 The application requires the following environment variables:
 
@@ -110,7 +110,7 @@ IMAGEKIT_PRIVATE_KEY	ImageKit private key used for media uploads
 
 Important: Never commit your .env file to GitHub.
 
-##🔑 Authentication
+#🔑 Authentication
 
 The application uses JWT-based authentication.
 
@@ -144,7 +144,7 @@ Store JWT in cookie
 
 Protected routes verify the JWT before allowing access.
 
-##👤 User Roles
+#👤 User Roles
 
 The application supports two roles:
 
@@ -159,7 +159,7 @@ Manage their uploaded music
 
 Protected routes verify both authentication and authorization.
 
-##🎵 Music Management
+#🎵 Music Management
 
 Artists can upload music along with a thumbnail.
 
@@ -183,7 +183,7 @@ MongoDB
 
 The music file and thumbnail are uploaded to ImageKit, while their URLs and metadata are stored in MongoDB.
 
-##💿 Album Management
+#💿 Album Management
 
 Artists can create albums by selecting specific music from their uploaded songs.
 
@@ -221,7 +221,7 @@ Check music belongs to artist
    ↓
 Create album
 
-##🗄️ Database Models
+#🗄️ Database Models
 
 The project uses MongoDB with Mongoose.
 
@@ -260,7 +260,7 @@ Music references
 
 Albums contain references to music documents using Mongoose ObjectId.
 
-##🔗 Database Relationships
+#🔗 Database Relationships
 
 The project uses Mongoose references to connect documents.
 
@@ -278,7 +278,7 @@ An artist can have multiple music documents.
 
 An album can contain multiple music documents.
 
-##🛡️ Security
+#🛡️ Security
 
 The project implements several security practices:
 
@@ -301,7 +301,7 @@ IMAGEKIT_PRIVATE_KEY
 
 are not included in the repository.
 
-##📦 Dependencies
+#📦 Dependencies
 
 Main dependencies include:
 
@@ -355,7 +355,7 @@ The root .gitignore contains:
 
 node_modules/
 .env
-🔮 Future Improvements
+#🔮 Future Improvements
 
 Possible future improvements include:
 
